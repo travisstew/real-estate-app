@@ -18,7 +18,7 @@ function ListCard(props){
                 
                 <h5 class="card-title">{props.price}</h5>
                 <h6 >{props.address}</h6>
-                <p class="card-text">Beds: {props.beds} | Baths: {props.baths}  </p>
+                <p class="card-text">Beds: {props.beds} | Baths: {props.baths} | Sqft: {props.sqft} </p>
                 
                 <a href="" class="btn btn-primary">Go somewhere</a>
             </div>

@@ -9,6 +9,7 @@ class Listings extends Component {
 
 
   componentDidMount(){
+    console.log(this.props.match.params.location)
     Axios({
       method: 'get', 
       url: 'https://realtor.p.rapidapi.com/properties/list-for-sale?sort=relevance&radius=10&city=chester&offset=0&limit=20&state_code=va',
