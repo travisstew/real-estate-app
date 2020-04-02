@@ -5,5 +5,9 @@ const axios = require('axios');
 require('dotenv').config();
 
 router.post('/api/listing',function (req,res) {
-    axios
+
 });
+
+
+
+module.exports = router; 
