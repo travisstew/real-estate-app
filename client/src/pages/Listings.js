@@ -9,17 +9,23 @@ class Listings extends Component {
 
 
   componentDidMount(){
-    console.log(this.props.location.city)
+
+    const city  = this.props.location.state.city;
+    city.toLowerCase();
+    const state = this.props.location.state.newState;
+    state.toLowerCase();
+
     Axios({
       method: 'get', 
-      url: 'https://realtor.p.rapidapi.com/properties/list-for-sale?sort=relevance&radius=10&city=chester&offset=0&limit=20&state_code=va',
+      url: `https://realtor.p.rapidapi.com/properties/list-for-sale?sort=relevance&radius=10&city=${city}&offset=0&limit=20&state_code=${state}`,
       // data: {id: varID},
       headers: {
         "x-rapidapi-host": "realtor.p.rapidapi.com",
         "x-rapidapi-key": "00b956d7c8msh458ab8d1c20369dp182f31jsn413e2da1e3e2"
       }
     }).then(res=> { 
-      // console.log(res.data.listings);
+
+      console.log(res.data.listings); //if no results condition 
       var apiList = res.data.listings;
       this.setState({
         listing: apiList
@@ -37,12 +43,15 @@ class Listings extends Component {
             <div style={{ display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
                 {this.state.listing.map(list=>(
                     <ListCard 
+                        key={list.property_id}
                         price={list.price} 
                         photo={list.photo}
                         address={list.address}
                         beds={list.beds}
                         baths={list.baths}
                         sqft={list.sqft}
+                        listing_id={list.listing_id}
+                        property_id={list.property_id}
                       />
                 ))}    
             </div> 

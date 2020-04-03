@@ -5,10 +5,6 @@ import React from 'react';
 
 
 function ListCard(props){
-      console.log(props.listing);
-      
-
-
     return(
         <div>
           <div class="card" style={{width:`${18}rem`}}>
@@ -20,7 +16,7 @@ function ListCard(props){
                 <h6 >{props.address}</h6>
                 <p class="card-text">Beds: {props.beds} | Baths: {props.baths} | Sqft: {props.sqft} </p>
                 
-                <a href="" class="btn btn-primary">Go somewhere</a>
+                <a href="" data-property_id={props.property_id} data-listing_id={props.listing_id}  class="btn btn-primary">Go somewhere</a>
             </div>
           </div>    
         </div>
