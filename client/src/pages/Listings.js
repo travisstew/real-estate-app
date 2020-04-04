@@ -5,6 +5,7 @@ import ListCard from '../components/ListCard';
 class Listings extends Component {
   state = { 
       listing:[],
+      isData: false,
    }
 
 
@@ -24,14 +25,16 @@ class Listings extends Component {
         "x-rapidapi-key": "00b956d7c8msh458ab8d1c20369dp182f31jsn413e2da1e3e2"
       }
     }).then(res=> { 
-
-      console.log(res.data.listings); //if no results condition 
+      console.log(res.data);
+      
+  
+     
+      //if no results condition 
       var apiList = res.data.listings;
       this.setState({
         listing: apiList
       })
-      
-      
+
      });
     
   }
@@ -41,7 +44,8 @@ class Listings extends Component {
     return ( 
       <div className="container">
             <div style={{ display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-                {this.state.listing.map(list=>(
+              
+                {  this.state.listing.map(list=>(
                     <ListCard 
                         key={list.property_id}
                         price={list.price} 

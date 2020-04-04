@@ -1,6 +1,9 @@
 
 import React, { Component } from 'react';
 import NavbarMain from '../components/Navbar';
+import Example from '../components/Modal';
+import modal from '../components/Modal';
+import NewModal from '../components/Modal';
 class Home extends Component {
   state = { 
       location:'',
@@ -92,6 +95,8 @@ class Home extends Component {
               </div>
             </div>
         </form>
+
+        <NewModal />
       
     </>      
    );
