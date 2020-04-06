@@ -44,21 +44,20 @@ class MyVerticallyCenteredModal extends Component {
 
 function NewModal(props) {
   const [modalShow, setModalShow] = React.useState(false);
-  // console.log('got the id', props.listing_id);
-//  console.log(props.listing_id);
+
   
    const detailId=()=>{
               Axios({
       method: 'get', 
       url: `https://realtor.p.rapidapi.com/properties/detail?listing_id=${props.listing_id}&prop_status=for_sale&property_id=${props.property_id}`,
-      // data: {id: varID},
+    
       headers: {
         "x-rapidapi-host": "realtor.p.rapidapi.com",
         "x-rapidapi-key": "00b956d7c8msh458ab8d1c20369dp182f31jsn413e2da1e3e2"
       }
     }).then(res=> { 
       console.log(res.data);
-      data= res.data;
+     
      });
    }
 
