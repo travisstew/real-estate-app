@@ -1,4 +1,5 @@
 import React from 'react';
+import NewModal from './Modal';
 
 
 
@@ -16,7 +17,11 @@ function ListCard(props){
                 <h6 >{props.address}</h6>
                 <p class="card-text">Beds: {props.beds} | Baths: {props.baths} | Sqft: {props.sqft} </p>
                 
-                <a href="" data-property_id={props.property_id} data-listing_id={props.listing_id}  class="btn btn-primary">Go somewhere</a>
+                <NewModal
+                    
+                    listing_id={props.listing_id}
+                    property_id={props.property_id}
+                 />
             </div>
           </div>    
         </div>

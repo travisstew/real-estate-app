@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import ListCard from '../components/ListCard';
+import NewModal from '../components/Modal';
 
 class Listings extends Component {
   state = { 
@@ -45,7 +46,8 @@ class Listings extends Component {
       <div className="container">
             <div style={{ display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
               
-                {  this.state.listing.map(list=>(
+                {  this.state.listing.map((list,i)=>(
+                  <div>
                     <ListCard 
                         key={list.property_id}
                         price={list.price} 
@@ -57,6 +59,12 @@ class Listings extends Component {
                         listing_id={list.listing_id}
                         property_id={list.property_id}
                       />
+                      {/* <NewModal 
+                          key={i}
+                          listing_id={list.listing_id}
+                          property_id={list.property_id}
+                       /> */}
+                    </div>
                 ))}    
             </div> 
       </div>  
