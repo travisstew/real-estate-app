@@ -23,7 +23,7 @@ class Listings extends Component {
       // data: {id: varID},
       headers: {
         "x-rapidapi-host": "realtor.p.rapidapi.com",
-        "x-rapidapi-key": "00b956d7c8msh458ab8d1c20369dp182f31jsn413e2da1e3e2"
+        "x-rapidapi-key": "6e9b83a612msh318d3a758266c94p116d02jsnef30ec6cb68f"
       }
     }).then(res=> { 
       console.log(res.data);

@@ -1,9 +1,6 @@
 import React from 'react';
 import NewModal from './Modal';
-
-
-
-
+import {Link} from 'react-router-dom';
 
 function ListCard(props){
     return(
@@ -17,11 +14,14 @@ function ListCard(props){
                 <h6 >{props.address}</h6>
                 <p class="card-text">Beds: {props.beds} | Baths: {props.baths} | Sqft: {props.sqft} </p>
                 
-                <NewModal
-                    
+                {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+                <Link to={{pathname:'/details', state: {listId: props.listing_id, propertyId: props.property_id }}}>Get Details</Link>
+                {/* <NewModal
+
                     listing_id={props.listing_id}
                     property_id={props.property_id}
-                 />
+                 /> */}
+              
             </div>
           </div>    
         </div>
