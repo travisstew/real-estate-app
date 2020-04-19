@@ -3,9 +3,24 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  /* padding-top: 3rem; */
   padding-bottom: 3rem;
   color: #5a5a5a;
+}
+.new-font{
+  font-family: 'Abril Fatface', cursive;
+}
+.second-font{
+  font-family: 'Bree Serif', serif;
+}
+.navbar-bac{
+  /* background: #4cbbb9AC; */
+  /* background: #204969; */
+  /* background: #fc5226; */
+  background: #1561ad;
+}
+#home{
+  /* color: #ff4a52; */
+  color:white;
 }
 .jumbotron{
   background-image: url('../src/images/newhome.jpg');
@@ -30,33 +45,39 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
- 
+}
+#search-bar{
+  border-radius: .5rem;
+}
+#button-addon2{
+    /* background: #ff4a52; */
+    background: #fc5226;
+    color: white;
+    margin-left: 1rem;
+    /* border-radius: 11px; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: solid white thin;
+    border-radius: 0;
+}
+.nav-link{
+  color: white;
 }
 
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
+/* -------------- LISTING PAGE -------------- */
+.listing-card{
+  padding: 1rem;
 }
 
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
+/* -------------- detail page ------------------- */
+p{
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: black;
+  font-size: larger;
 }
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 32rem;
+.wrapper-div{
+  margin-top: 1rem;
 }
 
 

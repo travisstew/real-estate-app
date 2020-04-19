@@ -1,27 +1,30 @@
 import React from 'react';
-import Navbar  from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
+import Navbar  from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import logo from '../images/logo.png';
 
 
 
 function NavbarMain(){
   return(
     <>
-         <Navbar  expand="lg">
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+         <Navbar className="navbar-bac text-white" expand="lg">
+            <Navbar.Brand href="/" id="home" className="new-font">
+            <img
+                alt=""
+                src={logo}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+              />{' '}
+            Real Estate</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                </NavDropdown>
+              <Nav className="ml-auto">
+                <Nav.Link href="/">Home</Nav.Link>
+                {/* <Nav.Link href="#link">Link</Nav.Link> */}
+                
               </Nav>
             
             </Navbar.Collapse>
