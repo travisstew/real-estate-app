@@ -1,10 +1,9 @@
 import React from 'react';
-import NewModal from './Modal';
 import {Link} from 'react-router-dom';
 
 function ListCard(props){
     return(
-        <div>
+        <div >
           <div class="card" style={{width:`${18}rem`}}>
               <img src={props.photo} style={{height:`${200}px`}} class="card-img-top" alt=""/>
               <div class="card-body">

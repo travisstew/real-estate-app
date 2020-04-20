@@ -30,8 +30,12 @@ body {
 }
 .jumbotron {
   border-radius: 0 !important;
-  margin-bottom: 4rem
-    ;
+  margin-bottom: 4rem;
+}
+.jumbo-heading{
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
 }
 .search-bar{
   width: 55%;
@@ -68,6 +72,11 @@ body {
 .listing-card{
   padding: 1rem;
 }
+.new-hover:hover{
+  size: 100px;
+}
+
+
 
 /* -------------- detail page ------------------- */
 p{

@@ -17,6 +17,10 @@ app.use(express.json());
 
 require('dotenv').config();
 
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'));
+};
+
 app.listen(PORT,function () { 
   console.log('listening on port ' + PORT);
  });

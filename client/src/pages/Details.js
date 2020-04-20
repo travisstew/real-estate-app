@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
-import pic from '../images/house1.jpg';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from 'react-image-gallery';
 import Spinner1 from '../components/Spinner';

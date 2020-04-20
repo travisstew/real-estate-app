@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import ListCard from '../components/ListCard';
-import NewModal from '../components/Modal';
 import Spinner1 from '../components/Spinner';
-import NavbarMain from '../components/Navbar';
 import NavbarSearch from '../components/NavbarSearch';
 import {Spring } from 'react-spring/renderprops';
 
@@ -79,7 +77,7 @@ class Listings extends Component {
 
                         >
                             { props =>(
-                              <div style={props}>
+                              <div className="new-hover" style={props}>
                       <div className="listing-card">
                                         <ListCard 
                                             key={list.property_id}

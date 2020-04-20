@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar  from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../images/logo.png';
 
 
@@ -22,8 +21,8 @@ function NavbarMain(){
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ml-auto">
-                <Nav.Link href="/">Home</Nav.Link>
-                {/* <Nav.Link href="#link">Link</Nav.Link> */}
+                <Nav.Link href="/" style={{color:"white"}}>Home</Nav.Link>
+                
                 
               </Nav>
             
