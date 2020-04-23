@@ -14,7 +14,7 @@ class Listings extends Component {
       location: '',
       state:'',
    }
-
+   static listing = [];
   handleChange =(e)=>{
     this.setState({
       location: e.target.value
@@ -45,31 +45,40 @@ class Listings extends Component {
       }
     }).then(res=> { 
       console.log(res.data);
+      console.log(res);
+      
 
       //if no results condition 
       var apiList = res.data.listings;
+      
       this.setState({
         listing: apiList,
         loading: false,
       });
      }); 
+
+
   }
 
   render() { 
+    
+    const display = this.state.listing || [];
+
     return ( <>
       {/* <NavbarMain /> */}
       <NavbarSearch
           onChangeHandle = {this.handleChange}
           onSubmitHandle = {this.handleSubmit}
           location = {this.state.location}
-
       />
 
       <div className="container">
             <div style={{ display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-              
+
                 {
-                  this.state.loading ? <div><Spinner1 /></div> : this.state.listing.map((list,i)=>(
+                  this.state.loading ? <div><Spinner1 /></div> : display > 0 ?  
+                  
+                  this.state.listing.map((list,i)=>(
 
                     <Spring 
                         from={{opacity: 0, marginLeft: -120, marginRight:100}}
@@ -95,10 +104,10 @@ class Listings extends Component {
                               </div>
                             )}
                           </Spring>
-                                        
+  
+                ) 
                 
-                )) 
-                }
+                ): <p>try new </p>}
 
 
                 

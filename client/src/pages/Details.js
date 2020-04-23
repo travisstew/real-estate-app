@@ -36,6 +36,9 @@ class Details extends Component {
         images: res.data.listing.photos,
         loading: false,
       })
+     }).then(()=>{
+    
+
      });
   }
 
@@ -64,8 +67,8 @@ class Details extends Component {
                         <p>{this.state.listDetails.listing.description}</p>
                       </div>
                     </div>
-           
-           
+                    
+                 
            </div>}
           
 
