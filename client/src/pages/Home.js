@@ -62,7 +62,7 @@ class Home extends Component {
 
     <div className="row featurette">
       <div className="col-md-7">
-        <h2 className="featurette-heading second-font"><span style={{color:'black'}}>First featurette heading.</span> <span className="text-muted">Move to What Moves You</span></h2>
+        <h2 className="featurette-heading second-font"><span style={{color:'black'}}>First Home Owners</span> <span className="text-muted">Move to What Moves You</span></h2>
         <p className="lead">Pride of ownership is the number one reason why people yearn to own their homes.  Beyond pride of ownership, it's important to realize another benefit. First, real estate moves in cycles, sometimes up, sometimes down, yet over the years, real estate has consistently appreciated.</p>
       </div>
       <div className="col-md-5">

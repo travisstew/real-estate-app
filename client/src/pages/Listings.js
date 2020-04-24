@@ -4,7 +4,7 @@ import ListCard from '../components/ListCard';
 import Spinner1 from '../components/Spinner';
 import NavbarSearch from '../components/NavbarSearch';
 import {Spring } from 'react-spring/renderprops';
-
+import NewSearch from '../components/NewSearch'
 
 class Listings extends Component {
   state = { 
@@ -76,7 +76,7 @@ class Listings extends Component {
             <div style={{ display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
 
                 {
-                  this.state.loading ? <div><Spinner1 /></div> : display > 0 ?  
+                  this.state.loading ? <div><Spinner1 /></div> : display.length > 0 ?  
                   
                   this.state.listing.map((list,i)=>(
 
@@ -107,7 +107,7 @@ class Listings extends Component {
   
                 ) 
                 
-                ): <p>try new </p>}
+                ): <NewSearch />}
 
 
                 
