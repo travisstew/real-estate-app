@@ -22,9 +22,7 @@ class Listings extends Component {
   }
 
   handleSubmit = (e)=>{
-    e.preventDefault();
-    console.log(this.state.location)
-    
+    e.preventDefault(); 
  }
 
 
@@ -35,29 +33,14 @@ class Listings extends Component {
     const state = this.props.location.state.newState;
     state.toLowerCase();
 
-    Axios({
-      method: 'get', 
-      url: `https://realtor.p.rapidapi.com/properties/list-for-sale?sort=relevance&radius=10&city=${city}&offset=0&limit=20&state_code=${state}`,
-      // data: {id: varID},
-      headers: {
-        "x-rapidapi-host": "realtor.p.rapidapi.com",
-        "x-rapidapi-key": "6e9b83a612msh318d3a758266c94p116d02jsnef30ec6cb68f"
-      }
-    }).then(res=> { 
-      console.log(res.data);
-      console.log(res);
+    Axios.put('/api/listing', {city:city, state:state}).then(res=>{
       
-
-      //if no results condition 
-      var apiList = res.data.listings;
-      
-      this.setState({
-        listing: apiList,
+     this.setState({
+        listing: res.data.listings,
         loading: false,
-      });
-     }); 
-
-
+      });    
+    });
+  
   }
 
   render() { 

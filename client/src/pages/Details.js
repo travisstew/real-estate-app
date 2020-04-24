@@ -21,31 +21,22 @@ class Details extends Component {
     const listId = this.props.location.state.listId;
     const propertyId = this.props.location.state.propertyId
 
-    Axios({
-      method: 'get', 
-      url: `https://realtor.p.rapidapi.com/properties/detail?listing_id=${listId}&prop_status=for_sale&property_id=${propertyId}`,
-    
-      headers: {
-        "x-rapidapi-host": "realtor.p.rapidapi.com",
-        "x-rapidapi-key": "6e9b83a612msh318d3a758266c94p116d02jsnef30ec6cb68f"
-      }
-    }).then(res=> { 
-      
+    Axios.put('/api/details', {listId: listId, propertyId: propertyId}).then(res=>{
+  
+        
       this.setState({
-        listDetails: res.data,
-        images: res.data.listing.photos,
-        loading: false,
-      })
-     }).then(()=>{
-    
+            listDetails: res.data.data,
+            images: res.data.data.listing.photos,
+            loading: false,
+          });
 
-     });
-  }
+    });
+
+  
+    }
 
   render() { 
-        console.log(this.state.listDetails.listing);
-        console.log(this.state.images);
-
+    
       
       return (
       <>  
