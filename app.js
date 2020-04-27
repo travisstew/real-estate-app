@@ -31,3 +31,9 @@ app.listen(PORT,function () {
   console.log('listening on port ' + PORT);
  });
 
+ app.use((req, res, next) => {
+  // Error goes via `next()` method
+  setImmediate(() => {
+      next(new Error('Something went wrong'));
+  });
+});
