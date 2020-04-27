@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/travisstew/real-estate-app/issues"
   },
-  "homepage": "https://github.com/travisstew/real-estate-app#readme",
+  "homepage": "",
   "dependencies": {
     "axios": "^0.19.2",
     "concurrently": "^5.1.0",
