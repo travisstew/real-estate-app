@@ -2,11 +2,9 @@
   "name": "real-estate-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client && npm run build ",
-    "install-client": "cd client && npm install ",
     "start": "node app.js",
     "client": "cd client && npm start",
     "dev": "concurrently \"nodemon app.js\" \"npm run client\"",
@@ -19,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/travisstew/real-estate-app/issues"
+    "url": "https://realestatenewapp.herokuapp.com/"
   },
   "homepage": "",
   "dependencies": {
