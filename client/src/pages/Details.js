@@ -22,11 +22,10 @@ class Details extends Component {
     const propertyId = this.props.location.state.propertyId
 
     Axios.put('/api/details', {listId: listId, propertyId: propertyId}).then(res=>{
-  
-        
+
       this.setState({
-            listDetails: res.data.data,
-            images: res.data.data.listing.photos,
+            listDetails: res.data.dataDetail,
+            images: res.data.dataDetail.listing.photos,
             loading: false,
           });
 
