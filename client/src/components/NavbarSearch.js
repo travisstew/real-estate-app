@@ -19,14 +19,14 @@ class NavbarSearch extends Component {
 
    handleSubmit = (e)=>{
     e.preventDefault();
-    console.log(this.state.location)
+    console.log(this.state.location);
     this.props.history.push({
       pathname: '/listing',
       search: '',
       state: { city: this.state.location, newState: this.state.state }
-    })
+    });
     window.location.reload();
- }
+  }
    
 
   render() { 
@@ -54,8 +54,8 @@ class NavbarSearch extends Component {
              
               </Nav>
             
-            </Navbar.Collapse>
-      </Navbar>
+             </Navbar.Collapse>
+          </Navbar>
           </> 
           
       );

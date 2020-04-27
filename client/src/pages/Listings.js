@@ -4,7 +4,8 @@ import ListCard from '../components/ListCard';
 import Spinner1 from '../components/Spinner';
 import NavbarSearch from '../components/NavbarSearch';
 import {Spring } from 'react-spring/renderprops';
-import NewSearch from '../components/NewSearch'
+import NewSearch from '../components/NewSearch';
+import NavbarMain from '../components/Navbar';
 
 class Listings extends Component {
   state = { 
@@ -48,12 +49,12 @@ class Listings extends Component {
     const display = this.state.listing || [];
 
     return ( <>
-      {/* <NavbarMain /> */}
-      <NavbarSearch
+      <NavbarMain />
+      {/* <NavbarSearch
           onChangeHandle = {this.handleChange}
           onSubmitHandle = {this.handleSubmit}
           location = {this.state.location}
-      />
+      /> */}
 
       <div className="container">
             <div style={{ display:"flex", flexWrap:"wrap", justifyContent:"center"}}>

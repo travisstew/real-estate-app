@@ -30,14 +30,14 @@ router.put('/api/details', function(req,res){
       "x-rapidapi-key": process.env.REAL_ESTATE_KEY,
     }
   }).then(result=> { 
-    console.log(result);
-    
-    
-    res.send({data:result.data});
-
+    res.send({dataDetail:result.data});
    });
-})
+});
 
+router.get('/listing', function (req,res) { 
+      const {} = req.body;
+});
+// 
 
 
 module.exports = router; 
