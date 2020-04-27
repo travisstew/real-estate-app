@@ -19,7 +19,7 @@ class NavbarSearch extends Component {
 
    handleSubmit = (e)=>{
     e.preventDefault();
-    console.log(this.state.location);
+    // console.log(this.state.location);
     this.props.history.push({
       pathname: '/listing',
       search: '',
