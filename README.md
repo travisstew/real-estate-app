@@ -2,7 +2,7 @@
 
 ## Summary 
 
- An app for user to search real estate lising by loctaion, and recieve details on the selected item.
+ An app for user to search real estate listings by loctaion, and recieve details on the selected item.
 
 - View Website https://realestatenewapp.herokuapp.com/
 
