@@ -23,10 +23,14 @@ body {
   color:white;
 }
 .jumbotron{
-  background-image: url('../src/images/newhome.jpg');
+  /* background-image: url('../src/images/newhome.jpg'); */
   background-size: cover;
   background-position-y: center;
-  height: 32rem;
+  /* height: 32rem; */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../src/images/newhome.jpg');
+  color: white;
+  background-size: cover;
+  background-position-y: center;
 }
 .jumbotron {
   border-radius: 0 !important;
@@ -52,6 +56,12 @@ body {
 }
 #search-bar{
   border-radius: .5rem;
+}
+#search-button{
+  background: #fc5226;
+  border-color: white;
+  font-family: 'Abril Fatface', cursive;
+
 }
 #button-addon2{
     /* background: #ff4a52; */
