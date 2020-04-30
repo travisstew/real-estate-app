@@ -31,6 +31,7 @@ body {
   color: white;
   background-size: cover;
   background-position-y: center;
+  background-attachment: fixed;
 }
 .jumbotron {
   border-radius: 0 !important;

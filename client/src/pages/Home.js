@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import NavbarMain from '../components/Navbar';
-import Example from '../components/Modal';
+
 
 
 class Home extends Component {

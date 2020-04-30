@@ -8,7 +8,7 @@ import logo from '../images/logo.png';
 function NavbarMain(){
   return(
     <>
-         <Navbar className="navbar-bac text-white" expand="lg">
+         <Navbar className="navbar-bac sticky-top text-white" expand="lg">
             <Navbar.Brand href="/" id="home" className="new-font">
             <img
                 alt=""
